@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Your Cart </title>
+
+    <link rel="stylesheet" href="cart.css">
+
+
+  <!-- Meta Pixel Code -->
+
+    <script>
+
+        !function(f,b,e,v,n,t,s)
+
+        {
+            if(f.fbq)return;
+
+            n=f.fbq=function()
+            {
+                n.callMethod ?
+                n.callMethod.apply(n,arguments) :
+                n.queue.push(arguments)
+            };
+
+            if(!f._fbq)f._fbq=n;
+
+            n.push=n;
+            n.loaded=!0;
+            n.version='2.0';
+            n.queue=[];
+
+            t=b.createElement(e);
+            t.async=!0;
+            t.src=v;
+
+            s=b.getElementsByTagName(e)[0];
+
+            s.parentNode.insertBefore(t,s)
+        }
+
+        (window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1248020420763678');
+
+        fbq('track', 'PageView');
+
+    </script>
+
+
+    <noscript>
+
+        <img
+            height="1"
+            width="1"
+            style="display:none"
+            src="https://www.facebook.com/tr?id=1248020420763678&ev=PageView&noscript=1"
+        />
+
+    </noscript>
+
+    <!-- End Meta Pixel Code -->
+
+
+
+ <link rel="icon" type="image/png" href="../favicon.png">
+    <meta name="google-site-verification: google4985e3aa6fbe50f0.html"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZDVF9XEPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HZDVF9XEPY');
+</script>
+</head>
+
+
+<body>
+
+
+<header class="cart-header">
+
+    <div class="logo">
+        <span>SULTAN'S</span>
+        <small>BRAND'S</small>
+    </div>
+
+    <nav>
+
+        <a href="../index.html">
+            HOME
+        </a>
+
+        <a href="../watches/watches.html">
+            COLLECTION
+        </a>
+
+        <a href="../index.html#about">
+            ABOUT
+        </a>
+
+        <a href="../index.html#contact">
+            CONTACT
+        </a>
+
+    </nav>
+
+</header>
+
+<div class="back-home">
+    <a href="../index.html">
+        ← Back to Sultan's Brands
+    </a>
+</div>
+
+<main class="cart-page">
+
+
+    <div class="page-heading">
+
+        <p>YOUR ROYAL SELECTION</p>
+
+        <h1>
+            Shopping Cart
+        </h1>
+
+    </div>
+
+
+
+    <section
+        id="emptyCart"
+        class="empty-cart"
+        style="display:none;"
+    >
+
+        <h2>
+            Your Cart is Empty
+        </h2>
+
+        <p>
+            Discover our collection of premium Sultan Watches.
+        </p>
+
+        <a
+            href="../index.html"
+            class="gold-button"
+        >
+            EXPLORE COLLECTION
+        </a>
+
+    </section>
+
+
+
+    <section
+        id="cartContent"
+        class="cart-content"
+    >
+
+
+        <div class="cart-items-wrapper">
+
+            <div class="cart-headings">
+
+                <span>PRODUCT</span>
+
+                <span>PRICE</span>
+
+                <span>QUANTITY</span>
+
+                <span>TOTAL</span>
+
+                <span></span>
+
+            </div>
+
+
+            <div id="cartItems"></div>
+
+        </div>
+
+
+
+        <aside class="cart-summary">
+
+            <p class="summary-label">
+                ORDER SUMMARY
+            </p>
+
+            <h2>
+                Your Order
+            </h2>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong id="cartSubtotal">
+                    Rs. 0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Shipping
+                </span>
+
+                <span>
+                    Calculated at checkout
+                </span>
+
+            </div>
+
+
+            <div class="summary-line"></div>
+
+
+            <div class="summary-row total-row">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cartTotal">
+                    Rs. 0
+                </strong>
+
+            </div>
+
+
+            <button
+                class="checkout-button"
+                onclick="goToCheckout()"
+            >
+                PROCEED TO CHECKOUT
+            </button>
+
+
+            <a
+                href="../index.html"
+                class="continue-shopping"
+            >
+                ← CONTINUE SHOPPING
+            </a>
+
+        </aside>
+
+    </section>
+
+</main>
+
+
+
+<footer>
+
+    <h2>
+        SULTAN'S BRAND'S
+    </h2>
+
+    <p>
+        Live Like a Sultan.
+    </p>
+
+    <p>
+        © 2026 Sultan's Brands. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<script src="../js/cart.js"></script>
+
+</body>
+
+</html>

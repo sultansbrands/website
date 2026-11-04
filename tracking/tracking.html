@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Track Order | Sultan's Brand's</title>
+
+    <link
+        rel="stylesheet"
+        href="tracking.css"
+    >
+
+
+
+
+
+
+      <!-- Meta Pixel Code -->
+
+    <script>
+
+        !function(f,b,e,v,n,t,s)
+
+        {
+            if(f.fbq)return;
+
+            n=f.fbq=function()
+            {
+                n.callMethod ?
+                n.callMethod.apply(n,arguments) :
+                n.queue.push(arguments)
+            };
+
+            if(!f._fbq)f._fbq=n;
+
+            n.push=n;
+            n.loaded=!0;
+            n.version='2.0';
+            n.queue=[];
+
+            t=b.createElement(e);
+            t.async=!0;
+            t.src=v;
+
+            s=b.getElementsByTagName(e)[0];
+
+            s.parentNode.insertBefore(t,s)
+        }
+
+        (window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1248020420763678');
+
+        fbq('track', 'PageView');
+
+    </script>
+
+
+    <noscript>
+
+        <img
+            height="1"
+            width="1"
+            style="display:none"
+            src="https://www.facebook.com/tr?id=1248020420763678&ev=PageView&noscript=1"
+        />
+
+    </noscript>
+
+    <!-- End Meta Pixel Code -->
+
+
+
+ <link rel="icon" type="image/png" href="../favicon.png">
+    <meta name="google-site-verification: google4985e3aa6fbe50f0.html"/>
+
+
+
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZDVF9XEPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HZDVF9XEPY');
+</script>
+</head>
+
+
+<body>
+
+
+<header class="tracking-header">
+
+    <a
+        href="../index.html"
+        class="logo"
+    >
+
+        <span>SULTAN'S</span>
+
+        <small>BRAND'S</small>
+
+    </a>
+
+
+    <nav>
+
+        <a href="../index.html">
+            HOME
+        </a>
+
+        <a href="../index.html">
+            COLLECTION
+        </a>
+
+        <a href="tracking.html" class="active">
+            TRACK ORDER
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="tracking-page">
+
+
+    <section class="tracking-hero">
+
+        <p class="eyebrow">
+            SULTAN'S BRAND'S
+        </p>
+
+        <h1>
+            Track Your Order
+        </h1>
+
+        <p>
+            Enter your Order ID below to check
+            the latest status of your order.
+        </p>
+
+    </section>
+
+
+
+    <section class="tracking-search">
+
+        <form id="trackingForm">
+
+            <label for="orderId">
+                ORDER ID
+            </label>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="orderId"
+                    placeholder="Example: SB-58321476-4821"
+                    required
+                >
+
+                <button type="submit">
+                    TRACK ORDER
+                </button>
+
+            </div>
+
+        </form>
+
+
+        <p
+            id="trackingError"
+            class="tracking-error"
+        ></p>
+
+    </section>
+
+
+
+    <section
+        id="orderResult"
+        class="order-result"
+    >
+
+
+        <div class="order-heading">
+
+            <div>
+
+                <p>
+                    ORDER DETAILS
+                </p>
+
+                <h2 id="displayOrderId">
+                    SB-00000000-0000
+                </h2>
+
+            </div>
+
+
+            <div class="order-status-badge">
+                <span id="currentStatus">
+                    Order Placed
+                </span>
+            </div>
+
+        </div>
+
+
+
+        <div class="order-info">
+
+            <div>
+
+                <span>
+                    ORDER DATE
+                </span>
+
+                <strong id="orderDate">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    CUSTOMER
+                </span>
+
+                <strong id="customerName">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    TOTAL
+                </span>
+
+                <strong id="orderTotal">
+                    Rs. 0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="timeline">
+
+
+            <div
+                class="timeline-item"
+                data-status="Order Placed"
+            >
+
+                <div class="timeline-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <h3>
+                        Order Placed
+                    </h3>
+
+                    <p>
+                        Your order has been received.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="timeline-line"
+            ></div>
+
+
+
+            <div
+                class="timeline-item"
+                data-status="Order Confirmed"
+            >
+
+                <div class="timeline-icon">
+                    2
+                </div>
+
+                <div>
+
+                    <h3>
+                        Order Confirmed
+                    </h3>
+
+                    <p>
+                        Your order has been confirmed.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="timeline-line"
+            ></div>
+
+
+
+            <div
+                class="timeline-item"
+                data-status="Processing"
+            >
+
+                <div class="timeline-icon">
+                    3
+                </div>
+
+                <div>
+
+                    <h3>
+                        Processing
+                    </h3>
+
+                    <p>
+                        Your order is being prepared.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="timeline-line"
+            ></div>
+
+
+
+            <div
+                class="timeline-item"
+                data-status="Shipped"
+            >
+
+                <div class="timeline-icon">
+                    4
+                </div>
+
+                <div>
+
+                    <h3>
+                        Shipped
+                    </h3>
+
+                    <p>
+                        Your order has been shipped.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="timeline-line"
+            ></div>
+
+
+
+            <div
+                class="timeline-item"
+                data-status="Out for Delivery"
+            >
+
+                <div class="timeline-icon">
+                    5
+                </div>
+
+                <div>
+
+                    <h3>
+                        Out for Delivery
+                    </h3>
+
+                    <p>
+                        Your order is on its way.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="timeline-line"
+            ></div>
+
+
+
+            <div
+                class="timeline-item"
+                data-status="Delivered"
+            >
+
+                <div class="timeline-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <h3>
+                        Delivered
+                    </h3>
+
+                    <p>
+                        Your order has been delivered.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="delivery-message">
+
+            <h3>
+                Thank you for shopping with Sultan's.
+            </h3>
+
+            <p>
+                Live Like a Sultan.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <h2>
+        SULTAN'S BRAND'S
+    </h2>
+
+    <p>
+        Live Like a Sultan.
+    </p>
+
+    <a href="../index.html">
+        Home
+    </a>
+
+    <a href="../index.html">
+        Collection
+    </a>
+
+    <p class="copyright">
+        © 2026 Sultan's Brands.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="tracking.js"></script>
+</body>
+
+</html>

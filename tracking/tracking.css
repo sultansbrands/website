@@ -1,0 +1,544 @@
+/* ================================
+   SULTAN'S WATCHES
+   TRACK ORDER
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.tracking-header {
+    height: 90px;
+    border-bottom: 1px solid #242424;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: #080808;
+}
+
+.logo {
+    text-decoration: none;
+    color: #d9ad32;
+
+    display: flex;
+    flex-direction: column;
+
+    letter-spacing: 4px;
+}
+
+.logo span {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.logo small {
+    font-size: 10px;
+    margin-top: 4px;
+    letter-spacing: 3px;
+}
+
+
+.tracking-header nav {
+    display: flex;
+    gap: 38px;
+}
+
+.tracking-header nav a {
+    color: #ddd;
+    text-decoration: none;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.tracking-header nav a:hover,
+.tracking-header nav a.active {
+    color: #d9ad32;
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+.tracking-page {
+    width: 90%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.tracking-hero {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.tracking-hero .eyebrow {
+    color: #d9ad32;
+
+    font-size: 11px;
+    letter-spacing: 5px;
+
+    margin-bottom: 18px;
+}
+
+.tracking-hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 55px;
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.tracking-hero > p:last-child {
+    color: #999;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ================================
+   SEARCH
+================================ */
+
+.tracking-search {
+    max-width: 750px;
+    margin: 0 auto 70px;
+}
+
+.tracking-search label {
+    display: block;
+
+    color: #d9ad32;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.search-box {
+    display: flex;
+
+    border: 1px solid #333;
+    background: #0d0d0d;
+}
+
+.search-box input {
+    flex: 1;
+
+    height: 58px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: white;
+
+    padding: 0 20px;
+
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: #666;
+}
+
+.search-box button {
+    width: 190px;
+
+    border: none;
+
+    background: #d9ad32;
+    color: #080808;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #f0c64a;
+}
+
+.tracking-error {
+    color: #d96b6b;
+
+    font-size: 13px;
+
+    margin-top: 12px;
+
+    min-height: 18px;
+}
+
+
+/* ================================
+   ORDER RESULT
+================================ */
+
+.order-result {
+    display: none;
+
+    border: 1px solid #292929;
+    background: #0c0c0c;
+
+    padding: 45px;
+}
+
+.order-result.show {
+    display: block;
+}
+
+
+/* ================================
+   ORDER HEADING
+================================ */
+
+.order-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #292929;
+}
+
+.order-heading p {
+    color: #d9ad32;
+
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+.order-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.order-status-badge {
+    border: 1px solid #d9ad32;
+
+    padding: 11px 18px;
+}
+
+.order-status-badge span {
+    color: #d9ad32;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* ================================
+   ORDER INFO
+================================ */
+
+.order-info {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-bottom: 1px solid #292929;
+}
+
+.order-info > div {
+    padding: 25px 20px;
+
+    border-right: 1px solid #292929;
+}
+
+.order-info > div:last-child {
+    border-right: none;
+}
+
+.order-info span {
+    display: block;
+
+    color: #777;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.order-info strong {
+    color: #eee;
+
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* ================================
+   TIMELINE
+================================ */
+
+.timeline {
+    padding: 45px 20px;
+}
+
+.timeline-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    opacity: 0.35;
+
+    transition: 0.4s;
+}
+
+.timeline-item.active {
+    opacity: 1;
+}
+
+.timeline-icon {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #444;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #777;
+
+    font-size: 12px;
+
+    flex-shrink: 0;
+}
+
+.timeline-item.active .timeline-icon {
+    background: #d9ad32;
+
+    border-color: #d9ad32;
+
+    color: #080808;
+}
+
+.timeline-item h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    margin-bottom: 6px;
+}
+
+.timeline-item p {
+    color: #777;
+
+    font-size: 12px;
+}
+
+.timeline-line {
+    width: 1px;
+    height: 35px;
+
+    background: #292929;
+
+    margin-left: 21px;
+}
+
+.timeline-line.active {
+    background: #d9ad32;
+}
+
+
+/* ================================
+   DELIVERY MESSAGE
+================================ */
+
+.delivery-message {
+    border-top: 1px solid #292929;
+
+    padding-top: 30px;
+
+    text-align: center;
+}
+
+.delivery-message h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    margin-bottom: 8px;
+}
+
+.delivery-message p {
+    color: #d9ad32;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    border-top: 1px solid #242424;
+
+    text-align: center;
+
+    padding: 55px 20px;
+}
+
+footer h2 {
+    color: #d9ad32;
+
+    font-size: 15px;
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+footer > p {
+    color: #777;
+
+    font-size: 12px;
+
+    margin-bottom: 22px;
+}
+
+footer a {
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    margin: 0 12px;
+
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #d9ad32;
+}
+
+footer .copyright {
+    color: #444;
+
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+    .tracking-header {
+        height: auto;
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .tracking-header nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tracking-page {
+        width: 92%;
+        padding: 65px 0;
+    }
+
+    .tracking-hero h1 {
+        font-size: 40px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+        height: 55px;
+    }
+
+    .order-result {
+        padding: 25px 18px;
+    }
+
+    .order-heading {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .order-info {
+        grid-template-columns: 1fr;
+    }
+
+    .order-info > div {
+        border-right: none;
+        border-bottom: 1px solid #292929;
+    }
+
+    .order-info > div:last-child {
+        border-bottom: none;
+    }
+
+    .timeline {
+        padding: 35px 5px;
+    }
+
+}

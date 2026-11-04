@@ -1,0 +1,2225 @@
+/* =========================================================
+   SULTAN'S BRANDS
+   PREMIUM LUXURY WEBSITE
+   STYLE.CSS
+========================================================= */
+
+
+/* =========================================================
+   01. ROOT VARIABLES
+========================================================= */
+
+:root {
+    --black: #070707;
+    --black-soft: #0d0d0d;
+    --black-card: #111111;
+
+    --gold: #c79a3b;
+    --gold-light: #e4c56d;
+    --gold-dark: #8f681f;
+
+    --white: #f5f1e8;
+    --white-soft: #d7d2c8;
+    --gray: #9a958b;
+    --gray-dark: #5f5b55;
+
+    --border: rgba(255, 255, 255, 0.10);
+
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: "Inter", Arial, sans-serif;
+
+    --container: 1280px;
+
+    --transition: all 0.4s ease;
+}
+
+
+/* =========================================================
+   02. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--sans);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   03. GLOBAL CONTAINER
+========================================================= */
+
+.container {
+    width: min(90%, var(--container));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   04. ANNOUNCEMENT BAR
+========================================================= */
+
+.announcement-bar {
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #050505;
+
+    border-bottom: 1px solid rgba(199, 154, 59, 0.18);
+
+    position: relative;
+    z-index: 100;
+}
+
+.announcement-bar p {
+    color: var(--gold-light);
+
+    font-size: 8px;
+    font-weight: 500;
+
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   05. HEADER / NAVBAR
+========================================================= */
+
+.header {
+    position: absolute;
+
+    top: 34px;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 50;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(0, 0, 0, 0.10);
+}
+
+.nav-container {
+    min-height: 92px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 0.85;
+
+    transition: var(--transition);
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo-main {
+    font-family: var(--serif);
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    color: var(--white);
+}
+
+.logo-sub {
+    margin-top: 7px;
+
+    font-family: var(--sans);
+
+    font-size: 7px;
+
+    font-weight: 500;
+
+    letter-spacing: 6px;
+
+    color: var(--gold-light);
+
+    padding-left: 3px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navigation {
+    display: flex;
+
+    align-items: center;
+
+    gap: 38px;
+}
+
+.navigation a {
+    position: relative;
+
+    color: var(--white-soft);
+
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    transition: var(--transition);
+}
+
+.navigation a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -9px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--gold-light);
+
+    transition: width 0.35s ease;
+}
+
+.navigation a:hover {
+    color: var(--gold-light);
+}
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   NAV BUTTON
+========================================================= */
+
+.nav-button {
+    border: 1px solid rgba(199, 154, 59, 0.55);
+
+    padding: 13px 22px;
+
+    color: var(--gold-light);
+
+    font-size: 8px;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    transition: var(--transition);
+}
+
+.nav-button:hover {
+    background: var(--gold);
+
+    color: #080808;
+
+    border-color: var(--gold);
+}
+
+
+/* =========================================================
+   06. HERO
+========================================================= */
+
+.hero-section {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(199, 154, 59, 0.16),
+            transparent 27%
+        ),
+        linear-gradient(
+            110deg,
+            #050505 0%,
+            #080808 45%,
+            #12100c 100%
+        );
+}
+
+
+/* Decorative golden circle */
+
+.hero-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    right: -180px;
+    top: 100px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(199, 154, 59, 0.13);
+
+    box-shadow:
+        0 0 0 50px rgba(199, 154, 59, 0.025),
+        0 0 0 100px rgba(199, 154, 59, 0.015);
+
+    pointer-events: none;
+}
+
+
+/* Hero background */
+
+.hero-background {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 78% 45%,
+            rgba(221, 183, 91, 0.20),
+            transparent 24%
+        ),
+        linear-gradient(
+            90deg,
+            #050505 0%,
+            #070707 42%,
+            rgba(7, 7, 7, 0.65) 70%,
+            rgba(7, 7, 7, 0.2) 100%
+        );
+
+    z-index: 0;
+}
+
+
+/* Hero overlay */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.10),
+            rgba(0, 0, 0, 0.45)
+        );
+
+    z-index: 1;
+}
+
+
+/* Hero container */
+
+.hero-container {
+    position: relative;
+
+    z-index: 5;
+
+    padding-top: 100px;
+}
+
+
+/* Hero content */
+
+.hero-content {
+    max-width: 850px;
+}
+
+
+/* Small heading */
+
+.hero-small-title {
+    margin-bottom: 25px;
+
+    color: var(--gold-light);
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+}
+
+
+/* Main heading */
+
+.hero-content h1 {
+    font-family: var(--serif);
+
+    font-size: clamp(75px, 10vw, 155px);
+
+    font-weight: 400;
+
+    line-height: 0.76;
+
+    letter-spacing: -5px;
+
+    color: var(--white);
+
+    margin-bottom: 38px;
+}
+
+.hero-content h1 span {
+    display: block;
+
+    color: var(--gold-light);
+}
+
+
+/* Hero description */
+
+.hero-description {
+    max-width: 480px;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.button {
+    min-height: 52px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0 30px;
+
+    font-size: 8px;
+
+    font-weight: 500;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    transition: var(--transition);
+}
+
+
+/* Gold button */
+
+.button-gold {
+    background:
+        linear-gradient(
+            105deg,
+            #a87924,
+            #e4c56d,
+            #b6862c
+        );
+
+    color: #080808;
+
+    border: 1px solid var(--gold);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.button-gold:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 40px rgba(199, 154, 59, 0.20);
+}
+
+
+/* Outline */
+
+.button-outline {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    color: var(--white-soft);
+
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.button-outline:hover {
+    border-color: var(--gold);
+
+    color: var(--gold-light);
+
+    background: rgba(199, 154, 59, 0.05);
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.scroll-indicator {
+    position: absolute;
+
+    left: 5%;
+
+    bottom: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: var(--gray-dark);
+
+    font-size: 7px;
+
+    letter-spacing: 4px;
+
+    z-index: 5;
+}
+
+.scroll-line {
+    width: 50px;
+
+    height: 1px;
+
+    background: var(--gold);
+}
+
+
+/* =========================================================
+   07. INTRO SECTION
+========================================================= */
+
+.intro-section {
+    padding: 150px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #080808,
+            #0d0d0d
+        );
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.intro-container {
+    text-align: center;
+
+    max-width: 1000px;
+}
+
+.section-label {
+    margin-bottom: 24px;
+
+    color: var(--gold-light);
+
+    font-size: 8px;
+
+    font-weight: 500;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+}
+
+
+/* Intro heading */
+
+.intro-container h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 35px;
+}
+
+.intro-container h2 span {
+    display: block;
+
+    color: var(--gold-light);
+}
+
+
+/* Intro paragraph */
+
+.intro-text {
+    max-width: 700px;
+
+    margin: 0 auto 25px;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 2;
+}
+
+
+/* Text links */
+
+.text-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 15px;
+
+    color: var(--gold-light);
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    transition: var(--transition);
+}
+
+.text-link:hover {
+    color: var(--white);
+}
+
+.text-link span {
+    transition: transform 0.3s ease;
+}
+
+.text-link:hover span {
+    transform: translateX(6px);
+}
+
+
+/* =========================================================
+   08. COLLECTIONS
+========================================================= */
+
+.collections-section {
+    padding: 140px 0;
+
+    background: #080808;
+}
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 6vw, 90px);
+
+    font-weight: 400;
+
+    line-height: 0.85;
+
+    letter-spacing: -2px;
+}
+
+
+/* Collection grid */
+
+.collection-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 3px;
+}
+
+
+/* Collection card */
+
+.collection-card {
+    min-height: 500px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #111;
+
+    isolation: isolate;
+}
+
+
+/* Card image */
+
+.collection-image {
+    position: absolute;
+
+    inset: 0;
+
+    transition:
+        transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+/* Individual luxury backgrounds */
+
+.watches-image {
+    background:
+        radial-gradient(
+            circle at 65% 35%,
+            rgba(214, 174, 79, 0.35),
+            transparent 15%
+        ),
+        linear-gradient(
+            135deg,
+            #29251e,
+            #080808 70%
+        );
+}
+
+.wears-image {
+    background:
+        radial-gradient(
+            circle at 40% 30%,
+            rgba(255, 255, 255, 0.12),
+            transparent 15%
+        ),
+        linear-gradient(
+            145deg,
+            #292929,
+            #080808 70%
+        );
+}
+
+.perfume-image {
+    background:
+        radial-gradient(
+            circle at 60% 35%,
+            rgba(196, 153, 61, 0.35),
+            transparent 16%
+        ),
+        linear-gradient(
+            135deg,
+            #271e13,
+            #080808 70%
+        );
+}
+
+.footwear-image {
+    background:
+        radial-gradient(
+            circle at 45% 40%,
+            rgba(255, 255, 255, 0.10),
+            transparent 18%
+        ),
+        linear-gradient(
+            135deg,
+            #242424,
+            #080808 70%
+        );
+}
+
+.cosmetics-image {
+    background:
+        radial-gradient(
+            circle at 60% 35%,
+            rgba(221, 188, 111, 0.24),
+            transparent 18%
+        ),
+        linear-gradient(
+            135deg,
+            #2b2119,
+            #080808 70%
+        );
+}
+
+.restaurant-image {
+    background:
+        radial-gradient(
+            circle at 55% 35%,
+            rgba(192, 147, 57, 0.25),
+            transparent 18%
+        ),
+        linear-gradient(
+            135deg,
+            #211a14,
+            #070707 70%
+        );
+}
+
+
+/* Card overlay */
+
+.collection-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.05) 25%,
+            rgba(0, 0, 0, 0.92) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* Hover */
+
+.collection-card:hover .collection-image {
+    transform: scale(1.08);
+}
+
+
+/* Card content */
+
+.collection-content {
+    position: absolute;
+
+    left: 32px;
+    right: 32px;
+    bottom: 32px;
+
+    z-index: 2;
+}
+
+.collection-number {
+    color: var(--gold-light);
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.collection-content h3 {
+    font-family: var(--serif);
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    margin-bottom: 10px;
+}
+
+.collection-content p:not(.collection-number) {
+    color: #aaa49a;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 22px;
+}
+
+.collection-content a {
+    color: var(--gold-light);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: var(--transition);
+}
+
+.collection-content a:hover {
+    color: var(--white);
+}
+
+
+/* =========================================================
+   09. MANIFESTO
+========================================================= */
+
+.manifesto-section {
+    position: relative;
+
+    padding: 170px 0;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            #0b0b0b,
+            #15120d
+        );
+}
+
+
+/* Giant S decoration */
+
+.manifesto-section::before {
+    content: "S";
+
+    position: absolute;
+
+    right: -40px;
+    top: -160px;
+
+    font-family: var(--serif);
+
+    font-size: 700px;
+
+    line-height: 1;
+
+    color: rgba(199, 154, 59, 0.025);
+
+    pointer-events: none;
+}
+
+.manifesto-container {
+    position: relative;
+
+    z-index: 2;
+}
+
+.manifesto-container h2 {
+    max-width: 1050px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(60px, 8vw, 115px);
+
+    font-weight: 400;
+
+    line-height: 0.85;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+}
+
+.manifesto-container h2 span {
+    display: block;
+
+    color: var(--gold-light);
+}
+
+.manifesto-text {
+    max-width: 650px;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   10. VALUES
+========================================================= */
+
+.values-section {
+    padding: 140px 0;
+
+    background: #080808;
+
+    border-top: 1px solid var(--border);
+}
+
+.values-section > .container > h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 6vw, 90px);
+
+    font-weight: 400;
+
+    line-height: 0.85;
+
+    margin-bottom: 70px;
+}
+
+.values-section h2 span {
+    color: var(--gold-light);
+}
+
+.values-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid var(--border);
+}
+
+.value {
+    min-height: 260px;
+
+    padding: 35px 30px;
+
+    border-right: 1px solid var(--border);
+
+    transition: var(--transition);
+}
+
+.value:last-child {
+    border-right: none;
+}
+
+.value:hover {
+    background: rgba(199, 154, 59, 0.035);
+}
+
+.value > span {
+    color: var(--gold-light);
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+.value h3 {
+    margin: 35px 0 15px;
+
+    font-family: var(--serif);
+
+    font-size: 35px;
+
+    font-weight: 400;
+}
+
+.value p {
+    color: var(--gray);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   11. SOCIAL
+========================================================= */
+
+.social-section {
+    padding: 130px 0;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0d0d0d,
+            #080808
+        );
+
+    border-top: 1px solid var(--border);
+}
+
+.social-container {
+    max-width: 750px;
+}
+
+.social-container h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 6vw, 85px);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    margin-bottom: 25px;
+}
+
+.social-container > p:not(.section-label) {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+.social-buttons {
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   12. CONTACT
+========================================================= */
+
+.contact-section {
+    padding: 150px 0;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(199, 154, 59, 0.10),
+            transparent 40%
+        ),
+        #070707;
+
+    border-top: 1px solid var(--border);
+}
+
+.contact-container {
+    max-width: 850px;
+}
+
+.contact-container h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    font-weight: 400;
+
+    line-height: 0.85;
+
+    margin-bottom: 30px;
+}
+
+.contact-container h2 span {
+    color: var(--gold-light);
+}
+
+.contact-container > p:not(.section-label) {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   13. FOOTER
+========================================================= */
+
+.footer {
+    padding: 80px 0 25px;
+
+    background: #040404;
+
+    border-top: 1px solid var(--border);
+}
+
+.footer-container {
+    display: grid;
+
+    grid-template-columns: 2fr repeat(3, 1fr);
+
+    gap: 60px;
+}
+
+
+/* Footer brand */
+
+.footer-brand p {
+    max-width: 300px;
+
+    color: var(--gray-dark);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    margin: 25px 0 18px;
+}
+
+.footer-brand strong {
+    color: var(--gold-light);
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    font-weight: 500;
+}
+
+
+/* Footer columns */
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+
+    color: var(--gold-light);
+
+    font-size: 8px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+}
+
+.footer-column a {
+    color: #77736c;
+
+    font-size: 10px;
+
+    transition: var(--transition);
+}
+
+.footer-column a:hover {
+    color: var(--white);
+}
+
+
+/* Footer bottom */
+
+.footer-bottom {
+    margin-top: 70px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    color: #4e4b46;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   14. RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .navigation {
+        gap: 20px;
+    }
+
+    .navigation a {
+        font-size: 8px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .value:nth-child(2) {
+        border-right: none;
+    }
+
+    .value:nth-child(1),
+    .value:nth-child(2) {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   15. RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 88%;
+    }
+
+
+    /* Announcement */
+
+    .announcement-bar p {
+        font-size: 6px;
+
+        letter-spacing: 2px;
+
+        text-align: center;
+    }
+
+
+    /* Header */
+
+    .header {
+        top: 34px;
+    }
+
+    .nav-container {
+        min-height: 78px;
+    }
+
+    .logo-main {
+        font-size: 23px;
+    }
+
+    .logo-sub {
+        font-size: 6px;
+
+        letter-spacing: 4px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+
+    /* Hero */
+
+    .hero-section {
+        min-height: 760px;
+
+        align-items: center;
+    }
+
+    .hero-container {
+        padding-top: 90px;
+    }
+
+    .hero-section::before {
+        width: 450px;
+        height: 450px;
+
+        right: -230px;
+
+        top: 180px;
+    }
+
+    .hero-content h1 {
+        font-size: 72px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+
+        max-width: 370px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .button {
+        min-height: 50px;
+
+        padding: 0 24px;
+    }
+
+    .scroll-indicator {
+        left: 6%;
+
+        bottom: 25px;
+    }
+
+
+    /* Intro */
+
+    .intro-section {
+        padding: 100px 0;
+    }
+
+    .intro-container h2 {
+        font-size: 58px;
+    }
+
+
+    /* Collections */
+
+    .collections-section {
+        padding: 100px 0;
+    }
+
+    .section-heading {
+        display: block;
+
+        margin-bottom: 40px;
+    }
+
+    .section-heading .text-link {
+        margin-top: 25px;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-card {
+        min-height: 430px;
+    }
+
+    .collection-content h3 {
+        font-size: 38px;
+    }
+
+
+    /* Manifesto */
+
+    .manifesto-section {
+        padding: 110px 0;
+    }
+
+    .manifesto-section::before {
+        font-size: 450px;
+
+        right: -80px;
+
+        top: -60px;
+    }
+
+    .manifesto-container h2 {
+        font-size: 62px;
+
+        letter-spacing: -2px;
+    }
+
+
+    /* Values */
+
+    .values-section {
+        padding: 100px 0;
+    }
+
+    .values-section > .container > h2 {
+        font-size: 58px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value {
+        border-right: none;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .value:last-child {
+        border-bottom: none;
+    }
+
+
+    /* Social */
+
+    .social-section {
+        padding: 100px 0;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    /* Contact */
+
+    .contact-section {
+        padding: 110px 0;
+    }
+
+    .contact-container h2 {
+        font-size: 60px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding-top: 65px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .footer-bottom {
+        margin-top: 50px;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   16. EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero-content h1 {
+        font-size: 60px;
+    }
+
+    .intro-container h2 {
+        font-size: 50px;
+    }
+
+    .manifesto-container h2 {
+        font-size: 52px;
+    }
+
+    .collection-content h3 {
+        font-size: 34px;
+    }
+
+    .contact-container h2 {
+        font-size: 50px;
+    }
+
+}
+
+/* =========================================
+   PREMIUM CART BUTTON
+========================================= */
+
+.cart-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #f5f1e8;
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    padding: 10px 14px;
+
+    border: 1px solid rgba(212, 175, 55, 0.45);
+
+    background: rgba(0, 0, 0, 0.25);
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.cart-btn span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 19px;
+    height: 19px;
+
+    padding: 0 5px;
+
+    border-radius: 50%;
+
+    background: #d4af37;
+    color: #080808;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.cart-btn:hover {
+    color: #d4af37;
+
+    border-color: #d4af37;
+
+    background: rgba(212, 175, 55, 0.08);
+
+    transform: translateY(-1px);
+}
+
+.cart-btn:hover span {
+    background: #f0c75e;
+}
+
+
+
+/* =========================================
+   SULTAN'S BRANDS — CORNER LOGO
+========================================= */
+
+.corner-logo {
+    position: absolute;
+    top: 18px;
+    left: 25px;
+
+    width: 80px;
+    height: 80px;
+
+    object-fit: contain;
+
+    z-index: 100;
+}
+
+/* =========================================
+   SULTAN'S BRANDS watch card img
+========================================= */
+
+
+.brand-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-card-image {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+.brand-card-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+
+
+/* =========================================
+   SULTAN'S WEARS CARD IMAGE
+========================================= */
+
+.brand-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Image */
+
+.brand-card-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    z-index: 0;
+
+    transition: transform 0.7s ease;
+}
+
+
+/* Dark Overlay */
+
+.brand-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.15) 20%,
+            rgba(0, 0, 0, 0.35) 50%,
+            rgba(0, 0, 0, 0.95) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* Content Above Image */
+
+.brand-card-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Image Hover Effect */
+
+.brand-card:hover .brand-card-image {
+    transform: scale(1.06);
+}
+
+
+/* Sultan's Wears Image Position */
+
+.wears-card .brand-card-image {
+    object-position: center center;
+}
+
+
+
+
+
+
+/* =========================================
+   SULTAN PERFUMES CARD
+========================================= */
+
+.brand-card {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* PERFUME BACKGROUND IMAGE */
+
+.brand-card-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    z-index: 0;
+
+    transition: transform 0.7s ease;
+}
+
+
+/* DARK LUXURY OVERLAY */
+
+.brand-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.10) 15%,
+            rgba(0, 0, 0, 0.35) 50%,
+            rgba(0, 0, 0, 0.95) 100%
+        );
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* CONTENT ABOVE IMAGE */
+
+.brand-card-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* PREMIUM HOVER ZOOM */
+
+.brand-card:hover .brand-card-image {
+    transform: scale(1.06);
+}
+
+
+/* PERFUME IMAGE POSITION */
+
+.perfumes-card .brand-card-image {
+    object-position: center center;
+}
+
+
+/* CARD NUMBER */
+
+.perfumes-card .card-number {
+    color: #d9ad43;
+}
+
+
+/* TITLE */
+
+.perfumes-card h2 {
+    color: #f1efeb;
+}
+
+
+/* TAGLINE */
+
+.perfumes-card p {
+    color: #b5b0a8;
+}
+
+
+/* EXPLORE LINK */
+
+.perfumes-card a {
+    color: #d9ad43;
+    text-decoration: none;
+}
+
+
+/* LINK HOVER */
+
+.perfumes-card a:hover {
+    color: #f0c65d;
+}
+
+
+
+
+
+/* =========================================
+   SULTAN COSMETICS CARD IMAGE
+========================================= */
+
+.collection-card.cosmetics-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* IMAGE */
+
+.collection-card.cosmetics-card .card-image {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+
+    overflow: hidden;
+}
+
+.collection-card.cosmetics-card .card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    transition: transform 0.7s ease;
+}
+
+
+/* DARK OVERLAY */
+
+.collection-card.cosmetics-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(5, 5, 5, 0.98) 5%,
+            rgba(5, 5, 5, 0.65) 42%,
+            rgba(5, 5, 5, 0.10) 100%
+        );
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* KEEP CONTENT ABOVE IMAGE */
+
+.collection-card.cosmetics-card .card-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* HOVER EFFECT */
+
+.collection-card.cosmetics-card:hover .card-image img {
+    transform: scale(1.07);
+}
+
+
+/* OPTIONAL GOLD GLOW */
+
+.collection-card.cosmetics-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: rgba(217, 173, 67, 0.10);
+
+    filter: blur(60px);
+
+    top: -50px;
+    right: -50px;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+
+/* =========================================================
+   SULTAN'S RESTAURANT CARD IMAGE
+========================================================= */
+
+.category-card.restaurant-card {
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.05) 0%,
+            rgba(0, 0, 0, 0.35) 55%,
+            rgba(0, 0, 0, 0.95) 100%
+        ),
+        url("img/restaurant-card.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* =========================================
+   COLLECTION REVIEW BUTTONS
+========================================= */
+
+.collection-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 22px;
+}
+
+
+.collection-review-link {
+    display: inline-flex;
+    align-items: center;
+
+    color: #d8aa3d;
+
+    text-decoration: none;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    padding: 9px 12px;
+
+    border: 1px solid rgba(216, 170, 61, 0.45);
+
+    background: rgba(0, 0, 0, 0.22);
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.collection-review-link:hover {
+    color: #080808;
+
+    background: #d8aa3d;
+
+    border-color: #d8aa3d;
+
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .collection-actions {
+        gap: 14px;
+
+        margin-top: 20px;
+    }
+
+
+    .collection-review-link {
+        font-size: 7px;
+
+        padding: 9px 11px;
+
+        letter-spacing: 1.5px;
+    }
+
+}
+
+
+ /* Fixed FOLLOW buttons - only this system is changed */
+        .floating-follow {
+            position: fixed !important;
+            left: 30px;
+            bottom: 30px;
+            z-index: 9999;
+            display: flex !important;
+            flex-direction: column;
+            gap: 10px;
+            width: 150px;
+            margin: 0 !important;
+        }
+
+        .floating-follow h4 {
+            margin: 0 0 4px;
+        }
+
+        .social-logo-circle {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #050505;
+            border: 1px solid #b88922;
+            box-shadow: 0 0 0 2px rgba(184, 137, 34, 0.12), 0 5px 18px rgba(0, 0, 0, 0.45);
+            color: #d4a72c;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon {
+            display: block;
+            width: 23px;
+            height: 23px;
+            margin: 0 auto;
+        }
+
+        .floating-social-btn {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: #d4a72c;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .floating-social-btn:hover .social-logo-circle {
+            color: #f1c65b;
+            border-color: #f1c65b;
+            transform: translateY(-3px) scale(1.06);
+            box-shadow: 0 0 18px rgba(212, 167, 44, 0.2);
+        }
+
+        .floating-social-btn:hover {
+            color: #fff;
+            border-color: #d4a72c;
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 600px) {
+            .floating-follow {
+                left: 15px;
+                bottom: 15px;
+                width: 125px;
+            }
+
+            .floating-social-btn {
+                padding: 8px 10px;
+                font-size: 12px;
+            }
+        }
+
+        /* Fixed back-to-top arrow */
+        .back-to-top {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            border: 1px solid #b88922;
+            background: #050505;
+            color: #d4a72c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 9999;
+            box-shadow: 0 0 0 2px rgba(184, 137, 34, 0.12), 0 5px 18px rgba(0, 0, 0, 0.45);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top svg {
+            width: 25px;
+            height: 25px;
+        }
+
+        .back-to-top:hover {
+            color: #f1c65b;
+            border-color: #f1c65b;
+            transform: translateY(-4px);
+            box-shadow: 0 0 18px rgba(212, 167, 44, 0.22);
+        }
+
+        @media (max-width: 600px) {
+            .back-to-top {
+                right: 15px;
+                bottom: 15px;
+                width: 46px;
+                height: 46px;
+            }
+        }

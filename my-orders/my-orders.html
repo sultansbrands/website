@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        My Orders | Sultan's Brands
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="my-orders.css"
+    >
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Meta Pixel Code -->
+
+    <script>
+
+        !function(f,b,e,v,n,t,s)
+
+        {
+            if(f.fbq)return;
+
+            n=f.fbq=function()
+            {
+                n.callMethod ?
+                n.callMethod.apply(n,arguments) :
+                n.queue.push(arguments)
+            };
+
+            if(!f._fbq)f._fbq=n;
+
+            n.push=n;
+            n.loaded=!0;
+            n.version='2.0';
+            n.queue=[];
+
+            t=b.createElement(e);
+            t.async=!0;
+            t.src=v;
+
+            s=b.getElementsByTagName(e)[0];
+
+            s.parentNode.insertBefore(t,s)
+        }
+
+        (window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1248020420763678');
+
+        fbq('track', 'PageView');
+
+    </script>
+
+
+    <noscript>
+
+        <img
+            height="1"
+            width="1"
+            style="display:none"
+            src="https://www.facebook.com/tr?id=1248020420763678&ev=PageView&noscript=1"
+        />
+
+    </noscript>
+
+    <!-- End Meta Pixel Code -->
+
+ <link rel="icon" type="image/png" href="../favicon.png">
+    <meta name="google-site-verification: google4985e3aa6fbe50f0.html"/>
+
+
+
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZDVF9XEPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HZDVF9XEPY');
+</script>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <a
+            href="../index.html"
+            class="brand"
+        >
+
+            SULTAN'S BRANDS
+
+        </a>
+
+
+        <nav class="nav">
+
+            <a href="../index.html">
+                HOME
+            </a>
+
+            <a href="../account/account.html">
+                ACCOUNT
+            </a>
+
+            <a href="../cart/cart.html">
+                CART
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="page-container">
+
+
+        <!-- PAGE INTRO -->
+
+        <section class="page-intro">
+
+            <span class="eyebrow">
+                YOUR ACCOUNT
+            </span>
+
+
+            <h1>
+                My Orders
+            </h1>
+
+
+            <p>
+                View, track and manage your orders.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             FIRST OPTIONS
+        ========================== -->
+
+        <section
+            id="ordersOptions"
+            class="orders-options"
+        >
+
+
+            <!-- TRACK -->
+
+            <button
+                type="button"
+                id="trackOptionBtn"
+                class="option-card"
+            >
+
+                <span class="option-icon">
+                    ◉
+                </span>
+
+
+                <span class="option-content">
+
+                    <span class="option-eyebrow">
+                        TRACKING
+                    </span>
+
+
+                    <strong>
+                        Track Order
+                    </strong>
+
+
+                    <small>
+                        Check the current status of your order.
+                    </small>
+
+                </span>
+
+            </button>
+
+
+
+            <!-- VIEW ORDERS -->
+
+            <button
+                type="button"
+                id="viewOrdersOptionBtn"
+                class="option-card"
+            >
+
+                <span class="option-icon">
+                    □
+                </span>
+
+
+                <span class="option-content">
+
+                    <span class="option-eyebrow">
+                        ORDERS
+                    </span>
+
+
+                    <strong>
+                        View Your Orders
+                    </strong>
+
+
+                    <small>
+                        See and manage all your orders.
+                    </small>
+
+                </span>
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             VIEW ORDERS SECTION
+        ========================== -->
+
+        <section
+            id="viewOrdersSection"
+            class="view-orders-section"
+        >
+
+
+            <button
+                type="button"
+                id="backToOptionsBtn"
+                class="back-button"
+            >
+
+                ← BACK TO MY ORDERS
+
+            </button>
+
+
+            <div class="orders-heading">
+
+                <span class="eyebrow">
+                    YOUR PURCHASE HISTORY
+                </span>
+
+
+                <h2>
+                    View Your Orders
+                </h2>
+
+
+                <p>
+                    Enter the email address you used when placing your order.
+                </p>
+
+            </div>
+
+
+
+            <!-- EMAIL SEARCH -->
+
+            <div class="orders-search">
+
+                <input
+                    type="email"
+                    id="ordersEmailInput"
+                    placeholder="Enter your email address"
+                    autocomplete="email"
+                >
+
+
+                <button
+                    type="button"
+                    id="findOrdersBtn"
+                >
+
+                    VIEW MY ORDERS
+
+                </button>
+
+            </div>
+
+
+            <p
+                id="ordersMessage"
+                class="orders-message"
+            ></p>
+
+
+
+            <!-- ORDERS -->
+
+            <div
+                id="ordersList"
+                class="orders-list"
+            ></div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         CANCEL CONFIRMATION
+    ========================== -->
+
+    <div
+        id="cancelOverlay"
+        class="cancel-overlay"
+    >
+
+
+        <div class="cancel-modal">
+
+
+            <div class="warning-icon">
+                !
+            </div>
+
+
+            <span class="eyebrow">
+                CANCEL ORDER
+            </span>
+
+
+            <h2>
+                Are you sure?
+            </h2>
+
+
+            <p>
+                Are you sure you want to cancel this order?
+                This action cannot be undone.
+            </p>
+
+
+            <div class="cancel-order-id-box">
+
+                <span>
+                    ORDER ID
+                </span>
+
+
+                <strong
+                    id="cancelOrderIdText"
+                >
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="cancel-actions">
+
+                <button
+                    type="button"
+                    id="keepOrderBtn"
+                    class="keep-order-button"
+                >
+
+                    KEEP ORDER
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="confirmCancelBtn"
+                    class="confirm-cancel-button"
+                >
+
+                    CANCEL ORDER
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- SUPABASE -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+    <!-- ONLY ONE MY ORDERS JS FILE -->
+
+    <script src="my-orders.js"></script>
+
+
+</body>
+
+</html>

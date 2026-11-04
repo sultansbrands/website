@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Account | Sultan's Brands</title>
+
+    <link
+        rel="stylesheet"
+        href="account.css"
+    >
+
+
+  <!-- Meta Pixel Code -->
+
+    <script>
+
+        !function(f,b,e,v,n,t,s)
+
+        {
+            if(f.fbq)return;
+
+            n=f.fbq=function()
+            {
+                n.callMethod ?
+                n.callMethod.apply(n,arguments) :
+                n.queue.push(arguments)
+            };
+
+            if(!f._fbq)f._fbq=n;
+
+            n.push=n;
+            n.loaded=!0;
+            n.version='2.0';
+            n.queue=[];
+
+            t=b.createElement(e);
+            t.async=!0;
+            t.src=v;
+
+            s=b.getElementsByTagName(e)[0];
+
+            s.parentNode.insertBefore(t,s)
+        }
+
+        (window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1248020420763678');
+
+        fbq('track', 'PageView');
+
+    </script>
+
+
+    <noscript>
+
+        <img
+            height="1"
+            width="1"
+            style="display:none"
+            src="https://www.facebook.com/tr?id=1248020420763678&ev=PageView&noscript=1"
+        />
+
+    </noscript>
+
+    <!-- End Meta Pixel Code -->
+ <link rel="icon" type="image/png" href="../favicon.png">
+    <meta name="google-site-verification: google4985e3aa6fbe50f0.html"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZDVF9XEPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HZDVF9XEPY');
+</script>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="account-header">
+
+        <a
+            href="../index.html"
+            class="account-logo"
+        >
+            <span>SULTAN'S</span>
+            <small>BRANDS</small>
+        </a>
+
+
+        <a
+            href="../index.html"
+            class="back-home"
+        >
+            ← BACK TO SULTAN'S BRANDS
+        </a>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN ACCOUNT PAGE
+    ========================================== -->
+
+    <main class="account-page">
+
+
+        <!-- =====================================
+             LOGIN / REGISTER
+        ====================================== -->
+
+        <section
+            class="auth-section"
+            id="authSection"
+        >
+
+
+            <div class="auth-heading">
+
+                <p>SULTAN'S BRANDS</p>
+
+                <h1>
+                    Welcome Back
+                </h1>
+
+                <span>
+                    Sign in to manage your account and orders.
+                </span>
+
+            </div>
+
+
+
+            <!-- =================================
+                 LOGIN
+            ================================== -->
+
+            <div
+                class="auth-box"
+                id="loginBox"
+            >
+
+                <h2>
+                    Sign In
+                </h2>
+
+
+                <form id="loginForm">
+
+
+                    <div class="input-group">
+
+                        <label for="loginIdentifier">
+                            Username, Email or Phone
+                        </label>
+
+                        <input
+                            type="text"
+                            id="loginIdentifier"
+                            placeholder="Enter username, email or phone"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label for="loginPassword">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        class="gold-btn"
+                    >
+                        SIGN IN
+                    </button>
+
+
+                </form>
+
+
+
+                <p class="switch-text">
+
+                    Don't have an account?
+
+                    <button
+                        type="button"
+                        onclick="showRegister()"
+                        class="text-btn"
+                    >
+                        Create Account
+                    </button>
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 REGISTER
+            ================================== -->
+
+            <div
+                class="auth-box"
+                id="registerBox"
+                style="display: none;"
+            >
+
+                <h2>
+                    Create Account
+                </h2>
+
+
+                <form id="registerForm">
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="input-group">
+
+                        <label for="registerName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registerName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- USERNAME -->
+
+                    <div class="input-group">
+
+                        <label for="registerUsername">
+                            Username
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registerUsername"
+                            placeholder="Choose a username"
+                            autocomplete="username"
+                            minlength="3"
+                            maxlength="20"
+                            pattern="[A-Za-z0-9_]+"
+                            required
+                        >
+
+                        <small class="input-help">
+                            3–20 characters and underscore only.
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="input-group">
+
+                        <label for="registerEmail">
+                            Email Address
+                            
+                        </label>
+
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                        >
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="input-group">
+
+                        <label for="registerPhone">
+                            Phone Number
+                            
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="registerPhone"
+                            placeholder="+92 300 1234567"
+                            autocomplete="tel"
+                        >
+
+                    </div>
+
+
+
+                    
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="input-group">
+
+                        <label for="registerPassword">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Create a password"
+                            minlength="8"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="input-group">
+
+                        <label for="registerConfirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="registerConfirmPassword"
+                            placeholder="Confirm your password"
+                            minlength="8"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- CREATE -->
+
+                    <button
+                        type="submit"
+                        class="gold-btn"
+                    >
+                        CREATE ACCOUNT
+                    </button>
+
+
+                </form>
+
+
+
+                <p class="switch-text">
+
+                    Already have an account?
+
+                    <button
+                        type="button"
+                        onclick="showLogin()"
+                        class="text-btn"
+                    >
+                        Sign In
+                    </button>
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             ACCOUNT DASHBOARD
+        ====================================== -->
+
+        <section
+            class="dashboard"
+            id="dashboard"
+            style="display: none;"
+        >
+
+
+            <div class="dashboard-header">
+
+
+                <div class="profile-area">
+
+
+                    <div class="profile-picture">
+
+                        <span id="profileInitial">
+                            S
+                        </span>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <p>
+                            SULTAN'S BRANDS
+                        </p>
+
+
+                        <h1>
+
+                            Welcome,
+
+                            <span id="userName">
+                                Customer
+                            </span>
+
+                        </h1>
+
+
+                        <span id="userEmail">
+                            customer@email.com
+                        </span>
+
+
+                        <span
+                            id="userUsername"
+                            class="dashboard-username"
+                        >
+                            @username
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <button
+                    type="button"
+                    class="logout-btn"
+                    onclick="logout()"
+                >
+                    LOG OUT
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 ACCOUNT CARDS
+            ================================== -->
+
+            <div class="account-grid">
+
+
+                <!-- ORDERS -->
+
+                <a href="../my-orders/my-orders.html" class="account-card">
+
+                    <div class="card-icon">
+                        📦
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            ORDERS
+                        </span>
+
+                        <h2>
+                            My Orders
+                        </h2>
+
+                        <p>
+                            View and track your orders.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- CART -->
+
+                <a
+                    href="../cart/cart.html"
+                    class="account-card"
+                >
+
+                    <div class="card-icon">
+                        🛒
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            SHOPPING
+                        </span>
+
+                        <h2>
+                            My Cart
+                        </h2>
+
+                        <p>
+                            View items saved in your cart.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- PROFILE -->
+
+                <button
+                    type="button"
+                    class="account-card card-button"
+                    onclick="showProfile()"
+                >
+
+                    <div class="card-icon">
+                        👤
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            ACCOUNT
+                        </span>
+
+                        <h2>
+                            My Profile
+                        </h2>
+
+                        <p>
+                            Manage your personal information.
+                        </p>
+
+                    </div>
+
+                </button>
+
+
+
+                <!-- SHOPPING -->
+
+                <a
+                    href="../watches/watches.html"
+                    class="account-card"
+                >
+
+                    <div class="card-icon">
+                        👑
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            SULTAN WATCHES
+                        </span>
+
+                        <h2>
+                            Continue Shopping
+                        </h2>
+
+                        <p>
+                            Explore the Royal Collection.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 PROFILE PANEL
+            ================================== -->
+
+            <div
+                class="profile-panel"
+                id="profilePanel"
+                style="display: none;"
+            >
+
+
+                <div class="panel-heading">
+
+
+                    <div>
+
+                        <p>
+                            ACCOUNT SETTINGS
+                        </p>
+
+                        <h2>
+                            My Profile
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        onclick="closeProfile()"
+                        class="close-btn"
+                    >
+                        ×
+                    </button>
+
+
+                </div>
+
+
+
+                <form id="profileForm">
+
+
+                    <!-- NAME -->
+
+                    <div class="input-group">
+
+                        <label for="profileName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="profileName"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- USERNAME -->
+
+                    <div class="input-group">
+
+                        <label for="profileUsername">
+                            Username
+                        </label>
+
+                        <input
+                            type="text"
+                            id="profileUsername"
+                            disabled
+                        >
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="input-group">
+
+                        <label for="profileEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="profileEmail"
+                            disabled
+                        >
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="input-group">
+
+                        <label for="profilePhone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="profilePhone"
+                            disabled
+                        >
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        class="gold-btn"
+                    >
+                        SAVE CHANGES
+                    </button>
+
+
+                </form>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <h2>
+            SULTAN'S BRANDS
+        </h2>
+
+
+        <p>
+            Live Like a Sultan.
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="../watches/watches.html">
+                Watches
+            </a>
+
+            <a href="../cart/cart.html">
+                Cart
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 Sultan's Brands.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         SUPABASE
+    ========================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="account.js"></script>
+
+
+</body>
+
+</html>

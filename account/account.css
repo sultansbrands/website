@@ -1,0 +1,1097 @@
+/* =========================================
+   SULTAN'S BRANDS — ACCOUNT PAGE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #080808;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.account-header {
+    width: 100%;
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+    background: #080808;
+}
+
+
+/* LOGO */
+
+.account-logo {
+    display: flex;
+    flex-direction: column;
+
+    text-decoration: none;
+
+    color: #d4af37;
+
+    letter-spacing: 4px;
+}
+
+.account-logo span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.account-logo small {
+    margin-top: 4px;
+
+    font-size: 9px;
+    letter-spacing: 5px;
+
+    color: #c9c9c9;
+}
+
+
+/* BACK BUTTON */
+
+.back-home {
+    color: #d4af37;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.back-home:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.account-page {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 90px 30px 120px;
+}
+
+
+/* =========================================
+   AUTH SECTION
+========================================= */
+
+.auth-section {
+    max-width: 520px;
+
+    margin: 0 auto;
+}
+
+
+/* HEADING */
+
+.auth-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.auth-heading p {
+    margin-bottom: 15px;
+
+    color: #d4af37;
+
+    font-size: 10px;
+    letter-spacing: 5px;
+}
+
+.auth-heading h1 {
+    margin-bottom: 15px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 48px;
+    font-weight: 400;
+
+    color: #ffffff;
+}
+
+.auth-heading span {
+    color: #999;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   AUTH BOX
+========================================= */
+
+.auth-box {
+    width: 100%;
+
+    padding: 42px;
+
+    background: #0d0d0d;
+
+    border: 1px solid rgba(212, 175, 55, 0.28);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   CREATE ACCOUNT / LOGIN TITLE
+   GOLDEN
+========================================= */
+
+.auth-box h2 {
+    margin-bottom: 30px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    color: #d4af37;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.input-group {
+    margin-bottom: 22px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #b9b9b9;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.input-group input {
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 16px;
+
+    outline: none;
+
+    background: #090909;
+
+    border: 1px solid #292929;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.input-group input::placeholder {
+    color: #666;
+}
+
+.input-group input:focus {
+    border-color: #d4af37;
+
+    box-shadow:
+        0 0 0 1px rgba(212, 175, 55, 0.15);
+}
+
+.input-group input:disabled {
+    color: #777;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   HELPER / INSTRUCTION TEXT
+   GOLDEN
+========================================= */
+
+.input-group small,
+.input-hint,
+.field-hint,
+.form-hint,
+.input-note,
+.auth-note,
+.auth-message {
+    color: #d4af37 !important;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   GOLD BUTTON
+========================================= */
+
+.gold-btn {
+    width: 100%;
+
+    height: 56px;
+
+    margin-top: 8px;
+
+    border: 1px solid #d4af37;
+
+    background: #d4af37;
+
+    color: #080808;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.gold-btn:hover {
+    background: transparent;
+
+    color: #d4af37;
+}
+
+
+/* =========================================
+   SWITCH TEXT
+========================================= */
+
+.switch-text {
+    margin-top: 28px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+.text-btn {
+    margin-left: 5px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #d4af37;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.text-btn:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard {
+    width: 100%;
+}
+
+
+/* DASHBOARD HEADER */
+
+.dashboard-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 55px;
+
+    padding-bottom: 35px;
+
+    border-bottom: 1px solid #222;
+}
+
+
+/* PROFILE AREA */
+
+.profile-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+
+/* PROFILE IMAGE */
+
+.profile-picture {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid #d4af37;
+
+    background: #111;
+
+    color: #d4af37;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+}
+
+.profile-area p {
+    margin-bottom: 8px;
+
+    color: #d4af37;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+}
+
+.profile-area h1 {
+    margin-bottom: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+}
+
+.profile-area h1 span {
+    color: #d4af37;
+}
+
+.profile-area > div > span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* LOGOUT */
+
+.logout-btn {
+    padding: 15px 25px;
+
+    border: 1px solid #333;
+
+    background: transparent;
+
+    color: #aaa;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    border-color: #d4af37;
+
+    color: #d4af37;
+}
+
+
+/* =========================================
+   ACCOUNT GRID
+========================================= */
+
+.account-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* ACCOUNT CARD */
+
+.account-card {
+    min-height: 190px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 22px;
+
+    padding: 32px;
+
+    text-decoration: none;
+
+    text-align: left;
+
+    background: #0d0d0d;
+
+    border: 1px solid #242424;
+
+    color: #ffffff;
+
+    transition:
+        border-color 0.3s,
+        transform 0.3s,
+        background 0.3s;
+}
+
+.account-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #d4af37;
+
+    background: #101010;
+}
+
+
+/* CARD ICON */
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(212, 175, 55, 0.4);
+
+    color: #d4af37;
+
+    font-size: 20px;
+}
+
+
+/* CARD TEXT */
+
+.account-card span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #d4af37;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+.account-card h2 {
+    margin-bottom: 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    font-weight: 400;
+}
+
+.account-card p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* BUTTON CARD */
+
+.card-button {
+    width: 100%;
+
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   PROFILE PANEL
+========================================= */
+
+.profile-panel {
+    margin-top: 30px;
+
+    padding: 35px;
+
+    background: #0d0d0d;
+
+    border: 1px solid rgba(212, 175, 55, 0.28);
+}
+
+
+/* PANEL HEADING */
+
+.panel-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 30px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #222;
+}
+
+.panel-heading p {
+    margin-bottom: 8px;
+
+    color: #d4af37;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+.panel-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 27px;
+
+    font-weight: 400;
+}
+
+
+/* CLOSE */
+
+.close-btn {
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid #333;
+
+    background: transparent;
+
+    color: #aaa;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    border-color: #d4af37;
+
+    color: #d4af37;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 70px 30px 35px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+
+    background: #060606;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+
+    color: #d4af37;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+
+    letter-spacing: 3px;
+}
+
+footer > p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #d4af37;
+}
+
+footer .copyright {
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #1c1c1c;
+
+    color: #555;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .account-header {
+        min-height: 75px;
+
+        padding: 0 20px;
+    }
+
+    .account-logo span {
+        font-size: 15px;
+    }
+
+    .account-logo small {
+        font-size: 8px;
+
+        letter-spacing: 4px;
+    }
+
+    .back-home {
+        font-size: 8px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .account-page {
+        padding: 60px 18px 80px;
+    }
+
+
+    .auth-heading {
+        margin-bottom: 30px;
+    }
+
+    .auth-heading h1 {
+        font-size: 36px;
+    }
+
+    .auth-heading span {
+        font-size: 12px;
+    }
+
+
+    .auth-box {
+        padding: 28px 20px;
+    }
+
+    .auth-box h2 {
+        font-size: 24px;
+    }
+
+
+    .dashboard-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .profile-area {
+        gap: 15px;
+    }
+
+    .profile-picture {
+        width: 58px;
+        height: 58px;
+
+        font-size: 23px;
+    }
+
+    .profile-area h1 {
+        font-size: 25px;
+    }
+
+
+    .logout-btn {
+        width: 100%;
+    }
+
+
+    .account-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .account-card {
+        min-height: 155px;
+
+        padding: 24px;
+
+        gap: 16px;
+    }
+
+    .card-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 17px;
+    }
+
+    .account-card h2 {
+        font-size: 21px;
+    }
+
+    .account-card p {
+        font-size: 12px;
+    }
+
+
+    .profile-panel {
+        padding: 24px 18px;
+    }
+
+
+    .footer-links {
+        gap: 18px;
+
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+    .account-header {
+        padding: 0 15px;
+    }
+
+    .back-home {
+        font-size: 7px;
+    }
+
+    .account-page {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .auth-heading h1 {
+        font-size: 31px;
+    }
+
+    .profile-area h1 {
+        font-size: 22px;
+    }
+
+    .account-card {
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================
+   SULTAN'S BRANDS — CUSTOM ALERT
+========================================= */
+
+.sultan-alert-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.78);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999999;
+
+    padding: 20px;
+
+    backdrop-filter: blur(6px);
+}
+
+
+.sultan-alert-box {
+    width: min(430px, 92vw);
+
+    background:
+        linear-gradient(
+            145deg,
+            #111111,
+            #050505
+        );
+
+    border: 1px solid #c9a227;
+
+    box-shadow:
+        0 0 0 1px rgba(201, 162, 39, 0.12),
+        0 20px 60px rgba(0, 0, 0, 0.7),
+        0 0 35px rgba(201, 162, 39, 0.12);
+
+    padding: 32px 30px 28px;
+
+    text-align: center;
+
+    animation:
+        sultanPopupIn 0.25s ease;
+}
+
+
+.sultan-alert-crown {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 15px;
+
+    border: 1px solid #c9a227;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #d4af37;
+
+    font-size: 27px;
+
+    font-family: Georgia, serif;
+}
+
+
+.sultan-alert-title {
+    color: #d4af37;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+    font-weight: 500;
+}
+
+
+.sultan-alert-line {
+    width: 55px;
+    height: 1px;
+
+    background: #c9a227;
+
+    margin: 15px auto 20px;
+}
+
+
+.sultan-alert-message {
+    color: #eeeeee;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+.sultan-alert-button {
+    min-width: 130px;
+
+    padding: 12px 24px;
+
+    border: 1px solid #c9a227;
+
+    background: #c9a227;
+
+    color: #080808;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+
+.sultan-alert-button:hover {
+    background: #e0c15a;
+
+    box-shadow:
+        0 0 18px rgba(201, 162, 39, 0.25);
+}
+
+
+.sultan-confirm-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 5px;
+}
+
+
+.sultan-cancel-button {
+    min-width: 110px;
+
+    padding: 12px 20px;
+
+    border: 1px solid #555;
+
+    background: transparent;
+
+    color: #cccccc;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+
+.sultan-cancel-button:hover {
+    border-color: #c9a227;
+
+    color: #d4af37;
+}
+
+
+@keyframes sultanPopupIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .sultan-alert-box {
+        padding: 27px 20px 24px;
+    }
+
+    .sultan-alert-title {
+        font-size: 17px;
+    }
+
+    .sultan-alert-message {
+        font-size: 13px;
+    }
+
+    .sultan-confirm-buttons {
+        flex-direction: column;
+    }
+
+    .sultan-cancel-button,
+    .sultan-alert-button {
+        width: 100%;
+    }
+
+}

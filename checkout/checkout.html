@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Checkout | Place Your Order</title>
+
+    <link
+        rel="stylesheet"
+        href="checkout.css"
+    >
+
+
+
+
+
+
+
+
+      <!-- Meta Pixel Code -->
+
+    <script>
+
+        !function(f,b,e,v,n,t,s)
+
+        {
+            if(f.fbq)return;
+
+            n=f.fbq=function()
+            {
+                n.callMethod ?
+                n.callMethod.apply(n,arguments) :
+                n.queue.push(arguments)
+            };
+
+            if(!f._fbq)f._fbq=n;
+
+            n.push=n;
+            n.loaded=!0;
+            n.version='2.0';
+            n.queue=[];
+
+            t=b.createElement(e);
+            t.async=!0;
+            t.src=v;
+
+            s=b.getElementsByTagName(e)[0];
+
+            s.parentNode.insertBefore(t,s)
+        }
+
+        (window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1248020420763678');
+
+        fbq('track', 'PageView');
+
+    </script>
+
+
+    <noscript>
+
+        <img
+            height="1"
+            width="1"
+            style="display:none"
+            src="https://www.facebook.com/tr?id=1248020420763678&ev=PageView&noscript=1"
+        />
+
+    </noscript>
+
+    <!-- End Meta Pixel Code -->
+
+
+ <link rel="icon" type="image/png" href="../favicon.png">
+    <meta name="google-site-verification: google4985e3aa6fbe50f0.html"/>
+
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZDVF9XEPY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HZDVF9XEPY');
+</script>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="checkout-header">
+
+    <a
+        href="../watches/watches.html"
+        class="checkout-logo"
+    >
+
+        <span>SULTAN'S</span>
+
+        <small>BRAND'S</small>
+
+    </a>
+
+</header>
+
+
+
+<!-- =========================================================
+     CHECKOUT PAGE
+========================================================= -->
+
+<main class="checkout-page">
+
+
+    <!-- =====================================================
+         CHECKOUT FORM
+    ====================================================== -->
+
+    <section class="checkout-form-section">
+
+
+        <a
+            href="../cart/cart.html"
+            class="back-link"
+        >
+            ← BACK TO CART
+        </a>
+
+
+
+        <div class="checkout-heading">
+
+            <p>
+                SULTAN'S BRAND'S
+            </p>
+
+            <h1>
+                Complete Your Order
+            </h1>
+
+            <span>
+                Enter your delivery information below.
+            </span>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CHECKOUT FORM
+        ================================================== -->
+
+        <form id="checkoutForm">
+
+
+            <!-- =============================================
+                 CONTACT INFORMATION
+            ============================================== -->
+
+            <div class="form-section">
+
+                <h2>
+                    Contact Information
+                </h2>
+
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email Address"
+                    autocomplete="email"
+                    required
+                >
+
+
+                <label class="checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="offers"
+                        name="offers"
+                    >
+
+                    <span>
+                        Email me with news and offers
+                    </span>
+
+                </label>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 DELIVERY INFORMATION
+            ============================================== -->
+
+            <div class="form-section">
+
+                <h2>
+                    Delivery Information
+                </h2>
+
+
+                <div class="two-inputs">
+
+                    <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        placeholder="First Name"
+                        autocomplete="given-name"
+                        required
+                    >
+
+
+                    <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        placeholder="Last Name"
+                        autocomplete="family-name"
+                        required
+                    >
+
+                </div>
+
+
+                <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    placeholder="Complete Address"
+                    autocomplete="street-address"
+                    required
+                >
+
+
+                <div class="two-inputs">
+
+                    <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        placeholder="City"
+                        autocomplete="address-level2"
+                        required
+                    >
+
+
+                    <input
+                        type="text"
+                        id="postalCode"
+                        name="postalCode"
+                        placeholder="Postal Code"
+                        autocomplete="postal-code"
+                    >
+
+                </div>
+
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Phone Number"
+                    autocomplete="tel"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- =============================================
+                 SHIPPING METHOD
+            ============================================== -->
+
+            <div class="form-section">
+
+                <h2>
+                    Shipping Method
+                </h2>
+
+
+                <label class="shipping-option">
+
+                    <input
+                        type="radio"
+                        name="shipping"
+                        value="250"
+                        checked
+                    >
+
+                    <span>
+                        Standard Delivery
+                    </span>
+
+                    <strong>
+                        Rs. 250
+                    </strong>
+
+                </label>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 PAYMENT METHOD
+            ============================================== -->
+
+            <div class="form-section">
+
+                <h2>
+                    Payment Method
+                </h2>
+
+
+                <!-- CASH ON DELIVERY -->
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="COD"
+                        checked
+                    >
+
+
+                    <div>
+
+                        <strong>
+                            Cash on Delivery
+                        </strong>
+
+                        <p>
+                            Pay when your order is delivered.
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+
+                <!-- BANK / ONLINE PAYMENT -->
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="BANK"
+                    >
+
+
+                    <div>
+
+                        <strong>
+                            Bank / Online Payment
+                        </strong>
+
+                        <p>
+                            Payment instructions will be provided after order confirmation.
+                        </p>
+
+                    </div>
+
+                </label>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 COMPLETE ORDER
+            ============================================== -->
+
+            <button
+                type="submit"
+                class="place-order"
+            >
+                COMPLETE ORDER
+            </button>
+
+
+            <p class="secure-text">
+                Your order information is securely processed.
+            </p>
+
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ORDER SUMMARY
+    ====================================================== -->
+
+    <aside class="order-summary">
+
+
+        <div class="summary-top">
+
+            <p>
+                YOUR ORDER
+            </p>
+
+
+            <h2>
+                Sultan Brand's
+            </h2>
+
+        </div>
+
+
+
+        <!-- CART PRODUCTS -->
+
+        <div id="checkoutItems"></div>
+
+
+
+        <div class="summary-divider"></div>
+
+
+
+        <!-- SUBTOTAL -->
+
+        <div class="summary-row">
+
+            <span>
+                Subtotal
+            </span>
+
+
+            <strong id="checkoutSubtotal">
+                Rs. 0
+            </strong>
+
+        </div>
+
+
+
+        <!-- SHIPPING -->
+
+        <div class="summary-row">
+
+            <span>
+                Shipping
+            </span>
+
+
+            <strong id="checkoutShipping">
+                Rs. 200
+            </strong>
+
+        </div>
+
+
+
+        <div class="summary-divider"></div>
+
+
+
+        <!-- TOTAL -->
+
+        <div class="summary-total">
+
+            <span>
+                Total
+            </span>
+
+
+            <strong id="checkoutTotal">
+                Rs. 0
+            </strong>
+
+        </div>
+
+
+    </aside>
+
+</main>
+
+
+
+<!-- =========================================================
+     ORDER SUCCESS POPUP
+========================================================= -->
+
+<div
+    id="orderSuccess"
+    class="order-success"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="successTitle"
+>
+
+
+    <div class="success-icon">
+        ✓
+    </div>
+
+
+    <h2 id="successTitle">
+        ORDER PLACED SUCCESSFULLY
+    </h2>
+
+
+    <p class="success-description">
+        Thank you for shopping with Sultan's Watches.
+        Your order has been received successfully.
+    </p>
+
+
+
+    <!-- =====================================================
+         ORDER ID
+    ====================================================== -->
+
+    <div class="success-order-id">
+
+        <span>
+            YOUR ORDER ID
+        </span>
+
+
+        <strong id="successOrderId">
+            —
+        </strong>
+
+    </div>
+
+
+    <p class="success-track-text">
+        Please save your Order ID to track your order.
+    </p>
+
+
+
+    <!-- =====================================================
+         SUCCESS ACTIONS
+    ====================================================== -->
+
+    <div class="success-actions">
+
+<button type="button" id="closeOrderCompleteBtn" class="close-order-complete">
+    ×
+</button>
+        <button
+            type="button"
+            id="copyOrderId"
+        >
+            COPY ORDER ID
+        </button>
+
+
+        <button
+            type="button"
+            id="trackOrderButton"
+        >
+            TRACK MY ORDER
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     SUPABASE
+========================================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
+
+
+
+<!-- =========================================================
+     EMAILJS
+========================================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+></script>
+
+
+
+<!-- =========================================================
+     CHECKOUT JAVASCRIPT
+========================================================= -->
+
+<script
+    src="../js/checkout.js"
+></script>
+
+
+</body>
+
+</html>

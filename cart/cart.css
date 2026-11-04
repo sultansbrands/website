@@ -1,0 +1,524 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #080808;
+    color: #f5f1e8;
+    font-family: Arial, sans-serif;
+}
+
+
+.cart-header {
+    height: 90px;
+    border-bottom: 1px solid #252525;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+}
+
+
+.logo span {
+    display: block;
+
+    color: #d9ad43;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+}
+
+
+.logo small {
+    color: #d9ad43;
+
+    letter-spacing: 4px;
+
+    font-size: 9px;
+}
+
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+
+nav a {
+    color: #ddd;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition: .3s;
+}
+
+
+nav a:hover {
+    color: #d9ad43;
+}
+
+
+
+.cart-page {
+    width: 88%;
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding: 90px 0;
+}
+
+
+
+.page-heading {
+    margin-bottom: 60px;
+}
+
+
+.page-heading p {
+    color: #d9ad43;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+.page-heading h1 {
+    font-family: Georgia, serif;
+
+    font-size: 55px;
+
+    font-weight: normal;
+}
+
+
+
+.cart-content {
+    display: grid;
+
+    grid-template-columns: 1fr 360px;
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+
+
+.cart-headings {
+    display: grid;
+
+    grid-template-columns: 2fr .8fr .9fr .8fr .5fr;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #333;
+
+    color: #777;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+
+.cart-item {
+    display: grid;
+
+    grid-template-columns: 2fr .8fr .9fr .8fr .5fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #292929;
+}
+
+
+
+.cart-product {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.cart-product img {
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+
+    border: 1px solid #333;
+}
+
+
+.cart-collection {
+    display: block;
+
+    color: #d9ad43;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.cart-product h3 {
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    font-weight: normal;
+
+    margin-bottom: 8px;
+}
+
+
+.cart-product p {
+    color: #888;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+
+.cart-price,
+.cart-total {
+    color: #ddd;
+
+    font-size: 13px;
+}
+
+
+.cart-total {
+    color: #d9ad43;
+
+    font-weight: bold;
+}
+
+
+
+.cart-quantity {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.qty-btn {
+    width: 27px;
+    height: 27px;
+
+    border: 1px solid #444;
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.qty-btn:hover {
+    border-color: #d9ad43;
+
+    color: #d9ad43;
+}
+
+
+.remove-btn {
+    border: 0;
+
+    background: transparent;
+
+    color: #d9ad43;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+
+.remove-btn:hover {
+    color: #d9ad43;
+}
+
+
+
+.cart-summary {
+    border: 1px solid #292929;
+
+    padding: 35px;
+}
+
+
+.summary-label {
+    color: #d9ad43;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+.cart-summary h2 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    font-weight: normal;
+
+    margin-bottom: 35px;
+}
+
+
+.summary-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    color: #aaa;
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+.summary-row strong {
+    color: #eee;
+}
+
+
+.summary-line {
+    height: 1px;
+
+    background: #333;
+
+    margin: 25px 0;
+}
+
+
+.total-row {
+    font-size: 15px;
+
+    color: white;
+}
+
+
+.total-row strong {
+    color: #d9ad43;
+
+    font-size: 20px;
+}
+
+
+.checkout-button {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 18px;
+
+    border: none;
+
+    background: #d9ad43;
+
+    color: #080808;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.checkout-button:hover {
+    background: #f0c65d;
+}
+
+
+.continue-shopping {
+    display: block;
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #d9ad43;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+.continue-shopping:hover {
+    color: #d9ad43;
+}
+
+
+
+.empty-cart {
+    text-align: center;
+
+    padding: 100px 20px;
+
+    border: 1px solid #292929;
+}
+
+
+.empty-cart h2 {
+    font-family: Georgia, serif;
+
+    font-size: 35px;
+
+    font-weight: normal;
+
+    margin-bottom: 15px;
+}
+
+
+.empty-cart p {
+    color: #888;
+
+    margin-bottom: 30px;
+}
+
+
+.gold-button {
+    display: inline-block;
+
+    background: #d9ad43;
+
+    color: #080808;
+
+    text-decoration: none;
+
+    padding: 15px 30px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+
+footer {
+    text-align: center;
+
+    border-top: 1px solid #222;
+
+    padding: 60px 20px;
+
+    color: #777;
+}
+
+
+footer h2 {
+    color: #d9ad43;
+
+    letter-spacing: 5px;
+
+    font-size: 16px;
+}
+
+
+footer p {
+    margin-top: 12px;
+
+    font-size: 11px;
+}
+
+
+
+@media (max-width: 900px) {
+
+    .cart-content {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-headings {
+        display: none;
+    }
+
+    .cart-item {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .cart-page {
+        width: 92%;
+    }
+
+}
+
+
+
+/* =========================
+   BACK TO SULTAN'S BRANDS
+========================= */
+
+.back-home {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 25px 40px 10px;
+}
+
+.back-home a {
+    display: inline-block;
+    color: #c9a24d;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 1px solid rgba(201, 162, 77, 0.45);
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+}
+
+.back-home a:hover {
+    background: #c9a24d;
+    color: #080808;
+}
